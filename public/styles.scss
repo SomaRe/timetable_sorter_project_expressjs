@@ -1,0 +1,64 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+body{
+    background-color: rgb(153, 240, 252);
+}
+
+h3{
+    padding: 25px;
+    font-weight: bolder;
+}
+
+.form-group{
+    label{
+        font-weight: 600;
+    }
+}
+
+.tablecol{
+    height: 410px;
+    .tableMain{
+        margin: auto auto;
+        margin-top: 10px;
+        font-size: 12px;
+        text-align: center;
+        height: 100%;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        color: whitesmoke;
+        font-weight: bold;
+        overflow:scroll;
+        table{
+            tbody{
+                td{
+                    padding: 5px;
+                    background-color: black;
+                }
+                .blue{
+                    
+                    background-color: cornflowerblue;
+                }
+                .red{
+                    background-color: lightcoral;
+                }
+                
+                
+            }
+            
+        }
+    }
+}
+
+.table_list{
+    width: 90%;
+    margin: 20px 0 0 0;
+    .table{
+        border-radius: 20px;
+        th{
+            border: none;
+        }
+    }
+}
