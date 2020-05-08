@@ -1,0 +1,432 @@
+<nav class="navbar navbar-light bg-light justify-content-reverse">
+    <a class="navbar-brand">Slots</a>
+    <form class="form-inline">
+        <button class="btn btn-outline-secondary" type="button" onclick="location.href='/';">Back</button>
+    </form>
+</nav>
+
+<div class="sorted_table mx-auto">
+    <table class="table table-bordered sorted_tt_table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>8:00-8:50</th>
+                <th>9:00-9:50</th>
+                <th>10:00-10:50</th>
+                <th>11:00-11:50</th>
+                <th style="border-right: #424242 3px solid;">12:00-12:50</th>
+                <th>14:00-13:50</th>
+                <th>15:00-15:50</th>
+                <th>16:00-16:50</th>
+                <th>17:00-17:50</th>
+                <th>18:00-18:50</th>
+                <th>19:00-19:50</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Monday</th>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.monday.[0] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.monday.[1] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.monday.[2] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare_half1 this.timetable_sorted.monday this.name}}
+                    {{name}}
+                    {{/compare_half1}}
+                    {{/each}}
+                </td>
+                <td style="border-right: #424242 3px solid;">
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.monday.[4] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.monday.[6] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.monday.[7] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.monday.[8] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare_half2 this.timetable_sorted.monday this.name}}
+                    {{name}}
+                    {{/compare_half2}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.monday.[10] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.monday.[12] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+
+            </tr>
+            <tr>
+                <th>Tuesday</th>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.tuesday.[0] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.tuesday.[1] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.tuesday.[2] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare_half1 this.timetable_sorted.tuesday this.name}}
+                    {{name}}
+                    {{/compare_half1}}
+                    {{/each}}
+                </td>
+                <td style="border-right: #424242 3px solid;">
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.tuesday.[4] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.tuesday.[6] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.tuesday.[7] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.tuesday.[8] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare_half2 this.timetable_sorted.tuesday this.name}}
+                    {{name}}
+                    {{/compare_half2}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.tuesday.[10] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.tuesday.[12] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+            </tr>
+            <tr>
+                <th>Wednesday</th>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.wednesday.[0] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.wednesday.[1] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.wednesday.[2] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare_half1 this.timetable_sorted.wednesday this.name}}
+                    {{name}}
+                    {{/compare_half1}}
+                    {{/each}}
+                </td>
+                <td style="border-right: #424242 3px solid;">
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.wednesday.[4] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.wednesday.[6] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.wednesday.[7] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.wednesday.[8] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare_half2 this.timetable_sorted.wednesday this.name}}
+                    {{name}}
+                    {{/compare_half2}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.wednesday.[10] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.wednesday.[12] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+
+            </tr>
+            <tr>
+                <th>Thursday</th>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.thursday.[0] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.thursday.[1] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.thursday.[2] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare_half1 this.timetable_sorted.thursday this.name}}
+                    {{name}}
+                    {{/compare_half1}}
+                    {{/each}}
+                </td>
+                <td style="border-right: #424242 3px solid;">
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.thursday.[4] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.thursday.[6] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.thursday.[7] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.thursday.[8] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare_half2 this.timetable_sorted.thursday this.name}}
+                    {{name}}
+                    {{/compare_half2}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.thursday.[10] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.thursday.[12] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+            </tr>
+            <tr>
+                <th>Friday</th>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.friday.[0] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.friday.[1] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.friday.[2] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare_half1 this.timetable_sorted.friday this.name}}
+                    {{name}}
+                    {{/compare_half1}}
+                    {{/each}}
+                </td>
+                <td style="border-right: #424242 3px solid;">
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.friday.[4] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.friday.[6] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.friday.[7] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.friday.[8] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare_half2 this.timetable_sorted.friday this.name}}
+                    {{name}}
+                    {{/compare_half2}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.friday.[10] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each list}}
+                    {{#compare this.timetable_sorted.friday.[12] this.name}}
+                    {{name}}
+                    {{/compare}}
+                    {{/each}}
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>

@@ -10,7 +10,7 @@ function viewtt(){
     else{
         document.getElementById('textareaerror').innerHTML="Check the copied timetabble";
     }
-    var stud_slots = [];
+    /*var stud_slots = [];
     for(var i =0;i<skeleton.length;i++){
         if(skeleton[i]!=s[i]){
             stud_slots.push(s[i]);
@@ -20,12 +20,12 @@ function viewtt(){
 
     const cells = document.querySelectorAll('td');
     for(var j =0;j<skeleton.length;j++){
-        document.querySelectorAll('td')[j].innerHTML=s[j];
+        document.querySelectorAll('.tt')[j].innerHTML=s[j];
         if(skeleton[j]!=s[j]){
-            document.querySelectorAll('td')[j].style.backgroundColor = "#CCFF33";
-            document.querySelectorAll('td')[j].style.color = "black";
+            document.querySelectorAll('.tt')[j].style.backgroundColor = "#CCFF33";
+            document.querySelectorAll('.tt')[j].style.color = "black";
         }
-    }
+    }*/
 }
 
 function view_stud_tt(s) {
@@ -33,10 +33,12 @@ function view_stud_tt(s) {
     console.log(s);
     const cells = document.querySelectorAll('td');
     for(var j =0;j<skeleton.length;j++){
-        document.querySelectorAll('td')[j].innerHTML=s[j];
+        document.querySelectorAll('.tt')[j].classList.remove("cells_change");
+    }
+    for(var j =0;j<skeleton.length;j++){
+        document.querySelectorAll('.tt')[j].innerHTML=s[j];
         if(skeleton[j]!=s[j]){
-            document.querySelectorAll('td')[j].style.backgroundColor = "#CCFF33";
-            document.querySelectorAll('td')[j].style.color = "black";
+            document.querySelectorAll('.tt')[j].classList.add("cells_change");
         }
     }
 }

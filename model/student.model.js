@@ -13,6 +13,13 @@ var studentSchema = new mongoose.Schema({
     },
     timetable: {
         type : [String]
+    },
+    timetable_sorted: {
+        monday: {type : [String]},
+        tuesday : {type : [String]},
+        wednesday : {type : [String]},
+        thursday : {type : [String]},
+        friday : {type : [String]},
     }
     
 });

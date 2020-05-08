@@ -1,10 +1,18 @@
-<h3>ADD Student</h3>
+
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <a class="navbar-brand">Navbar</a>
+  <form class="form-inline">
+    <button class="btn btn-outline-success" type="button" onclick="location.href='/generate_slots';">Generate Slots</button>
+  </form>
+</nav>
+    
+</div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-4" style="margin-left: 20px;">
-            <form action="/student" method="POST" >
+        <div class="column">
+            <form action="/" method="POST" class="form">
                 <div class="form-row">
-                    <div class="form-group">
+                    <div class="form-group"> 
                         <label>Name</label>
                         <input type="text" name="name" class="form-control" value="{{Student.name}}">
                         <div class="text-danger">
@@ -29,333 +37,10 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <button type="button" onclick="viewtt()" class='btn btn-primary' style="margin-right: 10px;">View</button>
+                    <button type="button" onclick="viewtt()" class='btn btn-primary' style="margin-right: 10px;">Check</button>
                     <button type="submit" class='btn btn-success' id="enable" disabled>submit</button>
                 </div>
             </form>
-        </div>
-        <div class="col-md-6 tablecol">
-            <div  class="tableMain">
-                <table id="table">
-                    <tbody>
-                        <tr>
-                            <td rowspan="2" class="blue">Theory</td>
-                            <td class="blue">Start</td>
-                            <td class="red">08:00</td>
-                            <td class="red">09:00</td>
-                            <td class="red">10:00</td>
-                            <td class="red">11:00</td>
-                            <td class="red">12:00</td>
-                            <td class="red">-</td>
-                            <td class="red">Lunch</td>
-                            <td class="red">14:00</td>
-                            <td class="red">15:00</td>
-                            <td class="red">16:00</td>
-                            <td class="red">17:00</td>
-                            <td class="red">18:00</td>
-                            <td class="red">18:50</td>
-                            <td class="red">19:01</td>
-                        </tr>
-                        <tr>
-                            <td class="blue">End</td>
-                            <td class="red">08:50</td>
-                            <td class="red">09:50</td>
-                            <td class="red">10:50</td>
-                            <td class="red">11:50</td>
-                            <td class="red">12:50</td>
-                            <td class="red">-</td>
-                            <td class="red">Lunch</td>
-                            <td class="red">14:50</td>
-                            <td class="red">15:50</td>
-                            <td class="red">16:50</td>
-                            <td class="red">17:50</td>
-                            <td class="red">18:50</td>
-                            <td class="red">19:00</td>
-                            <td class="red">19:50</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2" class="blue">Lab</td>
-                            <td class="blue">Start</td>
-                            <td class="red">08:00</td>
-                            <td class="red">08:46</td>
-                            <td class="red">10:00</td>
-                            <td class="red">10:46</td>
-                            <td class="red">11:31</td>
-                            <td class="red">12:16</td>
-                            <td class="red">Lunch</td>
-                            <td class="red">14:00</td>
-                            <td class="red">14:46</td>
-                            <td class="red">16:00</td>
-                            <td class="red">16:46</td>
-                            <td class="red">17:31</td>
-                            <td class="red">18:16</td>
-                            <td class="red">-</td>
-                        </tr>
-                        <tr>
-                            <td class="blue">End</td>
-                            <td class="red">08:45</td>
-                            <td class="red">09:30</td>
-                            <td class="red">10:45</td>
-                            <td class="red">11:30</td>
-                            <td class="red">12:15</td>
-                            <td class="red">13:00</td>
-                            <td class="red">Lunch</td>
-                            <td class="red">14:45</td>
-                            <td class="red">15:30</td>
-                            <td class="red">16:45</td>
-                            <td class="red">17:30</td>
-                            <td class="red">18:15</td>
-                            <td class="red">19:00</td>
-                            <td class="red">-</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2" class="blue">MON</td>
-                            <td class="blue">Theory</td>
-                            <td>A1</td>
-                            <td>F1</td>
-                            <td>D1</td>
-                            <td>TB1</td>
-                            <td>TG1</td>
-                            <td>-</td>
-                            <td>Lunch</td>
-                            <td>A2</td>
-                            <td>F2</td>
-                            <td>D2</td>
-                            <td>TB2</td>
-                            <td>TG2</td>
-                            <td>-</td>
-                            <td>V3</td>
-                        </tr>
-                        <tr>
-                            <td  class="blue">Lab</td>
-                            <td>L1</td>
-                            <td>L2</td>
-                            <td>L3</td>
-                            <td>L4</td>
-                            <td>L5</td>
-                            <td>L6</td>
-                            <td>Lunch</td>
-                            <td>L31</td>
-                            <td>L32</td>
-                            <td>L33</td>
-                            <td>L34</td>
-                            <td>L35</td>
-                            <td>L36</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2"  class="blue">TUE</td>
-                            <td class="blue">Theory</td>
-                            <td>B1</td>
-                            <td>G1</td>
-                            <td>E1</td>
-                            <td>TC1</td>
-                            <td>TAA1</td>
-                            <td>-</td>
-                            <td>Lunch</td>
-                            <td>B2</td>
-                            <td>G2</td>
-                            <td>E2</td>
-                            <td>TC2</td>
-                            <td>TAA2</td>
-                            <td>-</td>
-                            <td>V4</td>
-                        </tr>
-                        <tr>
-                            <td class="blue">Lab</td>
-                            <td>L7</td>
-                            <td>L8</td>
-                            <td>L9</td>
-                            <td>L10</td>
-                            <td>L11</td>
-                            <td>L12</td>
-                            <td>Lunch</td>
-                            <td>L37</td>
-                            <td>L38</td>
-                            <td>L39</td>
-                            <td>L40</td>
-                            <td>L41</td>
-                            <td>L42</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2" class="blue">WED</td>
-                            <td class="blue">Theory</td>
-                            <td>C1</td>
-                            <td>A1</td>
-                            <td>F1</td>
-                            <td>V1</td>
-                            <td>V2</td>
-                            <td>-</td>
-                            <td>Lunch</td>
-                            <td>C2</td>
-                            <td>A2</td>
-                            <td>F2</td>
-                            <td>TD2</td>
-                            <td>TBB2</td>
-                            <td>-</td>
-                            <td>V5</td>
-                        </tr>
-                        <tr>
-                            <td class="blue">Lab</td>
-                            <td>L13</td>
-                            <td>L14</td>
-                            <td>L15</td>
-                            <td>L16</td>
-                            <td>L17</td>
-                            <td>L18</td>
-                            <td>Lunch</td>
-                            <td>L43</td>
-                            <td>L44</td>
-                            <td>L45</td>
-                            <td>L46</td>
-                            <td>L47</td>
-                            <td>L48</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2" class="blue">THU</td>
-                            <td class="blue">Theory</td>
-                            <td>D1</td>
-                            <td>B1</td>
-                            <td>G1</td>
-                            <td>TE1</td>
-                            <td>TCC1</td>
-                            <td>-</td>
-                            <td>Lunch</td>
-                            <td>D2</td>
-                            <td>B2</td>
-                            <td>G2</td>
-                            <td>TE2</td>
-                            <td>TCC2</td>
-                            <td>-</td>
-                            <td>V6</td>
-                        </tr>
-                        <tr>
-                            <td class="blue">Lab</td>
-                            <td>L19</td>
-                            <td>L20</td>
-                            <td>L21</td>
-                            <td>L22</td>
-                            <td>L23</td>
-                            <td>L24</td>
-                            <td>Lunch</td>
-                            <td>L49</td>
-                            <td>L50</td>
-                            <td>L51</td>
-                            <td>L52</td>
-                            <td>L53</td>
-                            <td>L54</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2" class="blue">FRI</td>
-                            <td class="blue">Theory</td>
-                            <td>E1</td>
-                            <td>C1</td>
-                            <td>TA1</td>
-                            <td>TF1</td>
-                            <td>TD1</td>
-                            <td>-</td>
-                            <td>Lunch</td>
-                            <td>E2</td>
-                            <td>C2</td>
-                            <td>TA2</td>
-                            <td>TF2</td>
-                            <td>TDD2</td>
-                            <td>-</td>
-                            <td>V7</td>
-                        </tr>
-                        <tr>
-                            <td class="blue">Lab</td>
-                            <td>L25</td>
-                            <td>L26</td>
-                            <td>L27</td>
-                            <td>L28</td>
-                            <td>L29</td>
-                            <td>L30</td>
-                            <td>Lunch</td>
-                            <td>L55</td>
-                            <td>L56</td>
-                            <td>L57</td>
-                            <td>L58</td>
-                            <td>L59</td>
-                            <td>L60</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2" class="blue">SAT</td>
-                            <td class="blue">Theory</td>
-                            <td>V8</td>
-                            <td>X11</td>
-                            <td>X12</td>
-                            <td>Y11</td>
-                            <td>Y12</td>
-                            <td>-</td>
-                            <td>Lunch</td>
-                            <td>X21</td>
-                            <td>Z21</td>
-                            <td>Y21</td>
-                            <td>W21</td>
-                            <td>W22</td>
-                            <td>-</td>
-                            <td>V9</td>
-                        </tr>
-                        <tr>
-                            <td class="blue">Lab</td>
-                            <td>L71</td>
-                            <td>L72</td>
-                            <td>L73</td>
-                            <td>L74</td>
-                            <td>L75</td>
-                            <td>L76</td>
-                            <td>Lunch</td>
-                            <td>L77</td>
-                            <td>L78</td>
-                            <td>L79</td>
-                            <td>L80</td>
-                            <td>L81</td>
-                            <td>L82</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2" class="blue">SUN</td>
-                            <td class="blue">Theory</td>
-                            <td>V10</td>
-                            <td>Y11</td>
-                            <td>Y12</td>
-                            <td>X11</td>
-                            <td>X12</td>
-                            <td>-</td>
-                            <td>Lunch</td>
-                            <td>Y21</td>
-                            <td>Z21</td>
-                            <td>X21</td>
-                            <td>W21</td>
-                            <td>W22</td>
-                            <td>-</td>
-                            <td>V11</td>
-                        </tr>
-                        <tr>
-                            <td class="blue">Lab</td>
-                            <td>L83</td>
-                            <td>L84</td>
-                            <td>L85</td>
-                            <td>L86</td>
-                            <td>L87</td>
-                            <td>L88</td>
-                            <td>Lunch</td>
-                            <td>L89</td>
-                            <td>L90</td>
-                            <td>L91</td>
-                            <td>L92</td>
-                            <td>L93</td>
-                            <td>L94</td>
-                            <td>-</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
         </div>
     </div>
     <div class="row">
@@ -374,7 +59,7 @@
                         <tr> 
                             <th>{{this.name}}</th>
                             <td>{{this.id}}</td>
-                            <td><button class='btn btn-info'  onclick="view_stud_tt('{{this.timetable}}')">view</button><span> </span><button class='btn btn-danger' onclick="del(); window.location.href='/Student/delete/{{this._id}}'">delete</button></td>
+                            <td><button class='btn btn-info'  onclick="view_stud_tt('{{this.timetable}}')">view</button><span> </span><button class='btn btn-danger' onclick="del(); window.location.href='/delete/{{this._id}}'">delete</button></td>
                         </tr>
                     {{/each}}
                     </tbody>
@@ -382,4 +67,330 @@
             </div>
         </div>
     </div>
+    <div class="row justify-content-center">
+    <div class="tablecol">
+            <div  class="tableMain">
+                <table id="table">
+                    <tbody>
+                        <tr>
+                            <td rowspan="2" class="tt blue">Theory</td>
+                            <td class="tt blue">Start</td>
+                            <td class="tt red">08:00</td>
+                            <td class="tt red">09:00</td>
+                            <td class="tt red">10:00</td>
+                            <td class="tt red">11:00</td>
+                            <td class="tt red">12:00</td>
+                            <td class="tt red">-</td>
+                            <td class="tt red">Lunch</td>
+                            <td class="tt red">14:00</td>
+                            <td class="tt red">15:00</td>
+                            <td class="tt red">16:00</td>
+                            <td class="tt red">17:00</td>
+                            <td class="tt red">18:00</td>
+                            <td class="tt red">18:50</td>
+                            <td class="tt red">19:01</td>
+                        </tr>
+                        <tr>
+                            <td class="tt blue">End</td>
+                            <td class="tt red">08:50</td>
+                            <td class="tt red">09:50</td>
+                            <td class="tt red">10:50</td>
+                            <td class="tt red">11:50</td>
+                            <td class="tt red">12:50</td>
+                            <td class="tt red">-</td>
+                            <td class="tt red">Lunch</td>
+                            <td class="tt red">14:50</td>
+                            <td class="tt red">15:50</td>
+                            <td class="tt red">16:50</td>
+                            <td class="tt red">17:50</td>
+                            <td class="tt red">18:50</td>
+                            <td class="tt red">19:00</td>
+                            <td class="tt red">19:50</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" class="tt blue">Lab</td>
+                            <td class="tt blue">Start</td>
+                            <td class="tt red">08:00</td>
+                            <td class="tt red">08:46</td>
+                            <td class="tt red">10:00</td>
+                            <td class="tt red">10:46</td>
+                            <td class="tt red">11:31</td>
+                            <td class="tt red">12:16</td>
+                            <td class="tt red">Lunch</td>
+                            <td class="tt red">14:00</td>
+                            <td class="tt red">14:46</td>
+                            <td class="tt red">16:00</td>
+                            <td class="tt red">16:46</td>
+                            <td class="tt red">17:31</td>
+                            <td class="tt red">18:16</td>
+                            <td class="tt red">-</td>
+                        </tr>
+                        <tr>
+                            <td class="tt blue">End</td>
+                            <td class="tt red">08:45</td>
+                            <td class="tt red">09:30</td>
+                            <td class="tt red">10:45</td>
+                            <td class="tt red">11:30</td>
+                            <td class="tt red">12:15</td>
+                            <td class="tt red">13:00</td>
+                            <td class="tt red">Lunch</td>
+                            <td class="tt red">14:45</td>
+                            <td class="tt red">15:30</td>
+                            <td class="tt red">16:45</td>
+                            <td class="tt red">17:30</td>
+                            <td class="tt red">18:15</td>
+                            <td class="tt red">19:00</td>
+                            <td class="tt red">-</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" class="tt blue">MON</td>
+                            <td class="tt blue">Theory</td>
+                            <td class='tt'>A1</td>
+                            <td class="tt">F1</td>
+                            <td class="tt">D1</td>
+                            <td class="tt">TB1</td>
+                            <td class="tt">TG1</td>
+                            <td class="tt">-</td>
+                            <td class="tt">Lunch</td>
+                            <td class="tt">A2</td>
+                            <td class="tt">F2</td>
+                            <td class="tt">D2</td>
+                            <td class="tt">TB2</td>
+                            <td class="tt">TG2</td>
+                            <td class="tt">-</td>
+                            <td class="tt">V3</td>
+                        </tr>
+                        <tr>
+                            <td  class="tt blue">Lab</td>
+                            <td class="tt">L1</td>
+                            <td class="tt">L2</td>
+                            <td class="tt">L3</td>
+                            <td class="tt">L4</td>
+                            <td class="tt">L5</td>
+                            <td class="tt">L6</td>
+                            <td class="tt">Lunch</td>
+                            <td class="tt">L31</td>
+                            <td class="tt">L32</td>
+                            <td class="tt">L33</td>
+                            <td class="tt">L34</td>
+                            <td class="tt">L35</td>
+                            <td class="tt">L36</td>
+                            <td class="tt">-</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"  class="tt blue">TUE</td>
+                            <td class="tt blue">Theory</td>
+                            <td class="tt">B1</td>
+                            <td class="tt">G1</td>
+                            <td class="tt">E1</td>
+                            <td class="tt">TC1</td>
+                            <td class="tt">TAA1</td>
+                            <td class="tt">-</td>
+                            <td class="tt">Lunch</td>
+                            <td class="tt">B2</td>
+                            <td class="tt">G2</td>
+                            <td class="tt">E2</td>
+                            <td class="tt">TC2</td>
+                            <td class="tt">TAA2</td>
+                            <td class="tt">-</td>
+                            <td class="tt">V4</td>
+                        </tr>
+                        <tr>
+                            <td class="tt blue">Lab</td>
+                            <td class="tt">L7</td>
+                            <td class="tt">L8</td>
+                            <td class="tt">L9</td>
+                            <td class="tt">L10</td>
+                            <td class="tt">L11</td>
+                            <td class="tt">L12</td>
+                            <td class="tt">Lunch</td>
+                            <td class="tt">L37</td>
+                            <td class="tt">L38</td>
+                            <td class="tt">L39</td>
+                            <td class="tt">L40</td>
+                            <td class="tt">L41</td>
+                            <td class="tt">L42</td>
+                            <td class="tt">-</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" class="tt blue">WED</td>
+                            <td class="tt blue">Theory</td>
+                            <td class="tt">C1</td>
+                            <td class="tt">A1</td>
+                            <td class="tt">F1</td>
+                            <td class="tt">V1</td>
+                            <td class="tt">V2</td>
+                            <td class="tt">-</td>
+                            <td class="tt">Lunch</td>
+                            <td class="tt">C2</td>
+                            <td class="tt">A2</td>
+                            <td class="tt">F2</td>
+                            <td class="tt">TD2</td>
+                            <td class="tt">TBB2</td>
+                            <td class="tt">-</td>
+                            <td class="tt">V5</td>
+                        </tr>
+                        <tr>
+                            <td class="tt blue">Lab</td>
+                            <td class="tt">L13</td>
+                            <td class="tt">L14</td>
+                            <td class="tt">L15</td>
+                            <td class="tt">L16</td>
+                            <td class="tt">L17</td>
+                            <td class="tt">L18</td>
+                            <td class="tt">Lunch</td>
+                            <td class="tt">L43</td>
+                            <td class="tt">L44</td>
+                            <td class="tt">L45</td>
+                            <td class="tt">L46</td>
+                            <td class="tt">L47</td>
+                            <td class="tt">L48</td>
+                            <td class="tt">-</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" class="tt blue">THU</td>
+                            <td class="tt blue">Theory</td>
+                            <td class="tt">D1</td>
+                            <td class="tt">B1</td>
+                            <td class="tt">G1</td>
+                            <td class="tt">TE1</td>
+                            <td class="tt">TCC1</td>
+                            <td class="tt">-</td>
+                            <td class="tt">Lunch</td>
+                            <td class="tt">D2</td>
+                            <td class="tt">B2</td>
+                            <td class="tt">G2</td>
+                            <td class="tt">TE2</td>
+                            <td class="tt">TCC2</td>
+                            <td class="tt">-</td>
+                            <td class="tt">V6</td>
+                        </tr>
+                        <tr>
+                            <td class="tt blue">Lab</td>
+                            <td class="tt">L19</td>
+                            <td class="tt">L20</td>
+                            <td class="tt">L21</td>
+                            <td class="tt">L22</td>
+                            <td class="tt">L23</td>
+                            <td class="tt">L24</td>
+                            <td class="tt">Lunch</td>
+                            <td class="tt">L49</td>
+                            <td class="tt">L50</td>
+                            <td class="tt">L51</td>
+                            <td class="tt">L52</td>
+                            <td class="tt">L53</td>
+                            <td class="tt">L54</td>
+                            <td class="tt">-</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" class="tt blue">FRI</td>
+                            <td class="tt blue">Theory</td>
+                            <td class="tt">E1</td>
+                            <td class="tt">C1</td>
+                            <td class="tt">TA1</td>
+                            <td class="tt">TF1</td>
+                            <td class="tt">TD1</td>
+                            <td class="tt">-</td>
+                            <td class="tt">Lunch</td>
+                            <td class="tt">E2</td>
+                            <td class="tt">C2</td>
+                            <td class="tt">TA2</td>
+                            <td class="tt">TF2</td>
+                            <td class="tt">TDD2</td>
+                            <td class="tt">-</td>
+                            <td class="tt">V7</td>
+                        </tr>
+                        <tr>
+                            <td class="tt blue">Lab</td>
+                            <td class="tt">L25</td>
+                            <td class="tt">L26</td>
+                            <td class="tt">L27</td>
+                            <td class="tt">L28</td>
+                            <td class="tt">L29</td>
+                            <td class="tt">L30</td>
+                            <td class="tt">Lunch</td>
+                            <td class="tt">L55</td>
+                            <td class="tt">L56</td>
+                            <td class="tt">L57</td>
+                            <td class="tt">L58</td>
+                            <td class="tt">L59</td>
+                            <td class="tt">L60</td>
+                            <td class="tt">-</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" class="tt blue">SAT</td>
+                            <td class="tt blue">Theory</td>
+                            <td class="tt">V8</td>
+                            <td class="tt">X11</td>
+                            <td class="tt">X12</td>
+                            <td class="tt">Y11</td>
+                            <td class="tt">Y12</td>
+                            <td class="tt">-</td>
+                            <td class="tt">Lunch</td>
+                            <td class="tt">X21</td>
+                            <td class="tt">Z21</td>
+                            <td class="tt">Y21</td>
+                            <td class="tt">W21</td>
+                            <td class="tt">W22</td>
+                            <td class="tt">-</td>
+                            <td class="tt">V9</td>
+                        </tr>
+                        <tr>
+                            <td class="tt blue">Lab</td>
+                            <td class="tt">L71</td>
+                            <td class="tt">L72</td>
+                            <td class="tt">L73</td>
+                            <td class="tt">L74</td>
+                            <td class="tt">L75</td>
+                            <td class="tt">L76</td>
+                            <td class="tt">Lunch</td>
+                            <td class="tt">L77</td>
+                            <td class="tt">L78</td>
+                            <td class="tt">L79</td>
+                            <td class="tt">L80</td>
+                            <td class="tt">L81</td>
+                            <td class="tt">L82</td>
+                            <td class="tt">-</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" class="tt blue">SUN</td>
+                            <td class="tt blue">Theory</td>
+                            <td class="tt">V10</td>
+                            <td class="tt">Y11</td>
+                            <td class="tt">Y12</td>
+                            <td class="tt">X11</td>
+                            <td class="tt">X12</td>
+                            <td class="tt">-</td>
+                            <td class="tt">Lunch</td>
+                            <td class="tt">Y21</td>
+                            <td class="tt">Z21</td>
+                            <td class="tt">X21</td>
+                            <td class="tt">W21</td>
+                            <td class="tt">W22</td>
+                            <td class="tt">-</td>
+                            <td class="tt">V11</td>
+                        </tr>
+                        <tr>
+                            <td class="tt blue">Lab</td>
+                            <td class="tt">L83</td>
+                            <td class="tt">L84</td>
+                            <td class="tt">L85</td>
+                            <td class="tt">L86</td>
+                            <td class="tt">L87</td>
+                            <td class="tt">L88</td>
+                            <td class="tt">Lunch</td>
+                            <td class="tt">L89</td>
+                            <td class="tt">L90</td>
+                            <td class="tt">L91</td>
+                            <td class="tt">L92</td>
+                            <td class="tt">L93</td>
+                            <td class="tt">L94</td>
+                            <td class="tt">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+    </div>
 </div>
+

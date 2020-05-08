@@ -3,12 +3,31 @@
 }
 
 body {
-  background-color: #99f0fc;
+  background-color: white;
 }
 
-h3 {
-  padding: 25px;
-  font-weight: bolder;
+nav {
+  margin-bottom: 25px;
+}
+
+.tt_sorter {
+  padding: 10px;
+}
+
+.column {
+  width: 400px;
+  margin: auto auto;
+}
+
+.get_slots {
+  padding: 10px;
+}
+
+.form {
+  border-radius: 10px;
+  padding: 15px;
+  -webkit-box-shadow: 0px 0px 2px 2px #929292;
+          box-shadow: 0px 0px 2px 2px #929292;
 }
 
 .form-group label {
@@ -16,27 +35,39 @@ h3 {
 }
 
 .tablecol {
-  height: 410px;
+  overflow: scroll;
+}
+
+.tablecol::-webkit-scrollbar {
+  display: none;
 }
 
 .tablecol .tableMain {
-  margin: auto auto;
   margin-top: 10px;
   font-size: 12px;
   text-align: center;
-  height: 100%;
   color: whitesmoke;
   font-weight: bold;
-  overflow: scroll;
 }
 
 .tablecol .tableMain::-webkit-scrollbar {
   display: none;
 }
 
-.tablecol .tableMain table tbody td {
-  padding: 5px;
+.tablecol .tableMain table {
+  width: 1000px;
+  height: 500px;
+  table-layout: fixed;
+  overflow: hidden;
+}
+
+.tablecol .tableMain table tbody {
   background-color: black;
+}
+
+.tablecol .tableMain table tbody td {
+  width: 10%;
+  padding: 5px;
 }
 
 .tablecol .tableMain table tbody .blue {
@@ -45,6 +76,11 @@ h3 {
 
 .tablecol .tableMain table tbody .red {
   background-color: lightcoral;
+}
+
+.cells_change {
+  background-color: #CCFF33;
+  color: black;
 }
 
 .table_list {
@@ -58,5 +94,32 @@ h3 {
 
 .table_list .table th {
   border: none;
+}
+
+.sorted_table {
+  width: 90%;
+  overflow: scroll;
+}
+
+.sorted_table::-webkit-scrollbar {
+  display: none;
+}
+
+.sorted_table .sorted_tt_table {
+  font-size: 12px;
+}
+
+.sorted_table .sorted_tt_table tr td p {
+  font-weight: 500;
+}
+
+.sorted_table .sorted_tt_table .break {
+  padding: none;
+  margin: none;
+  border: none;
+  font-size: 5px;
+  color: whitesmoke;
+  background-color: #2a2a2a;
+  width: 5px;
 }
 /*# sourceMappingURL=styles.css.map */
