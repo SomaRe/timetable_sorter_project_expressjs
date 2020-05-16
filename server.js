@@ -6,6 +6,7 @@ const exphbs = require("express-handlebars")
 const bodyparser=require('body-parser');
 
 
+
 const studentController=require('./controllers/studentController')
 
 var app=express();
@@ -43,8 +44,7 @@ app.engine('hbs',exphbs({
 }));
 app.set('view engine','hbs');
 
-
-
+  
 app.listen(3000,()=>{
 
     console.log('express started at :3000');
